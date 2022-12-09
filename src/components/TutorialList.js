@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import
 {
   retrieveTutorial,
@@ -23,7 +23,8 @@ function TutotialList ()
   useEffect( () =>
   {
     dispatch( retrieveTutorial() );
-  } );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [] );
 
   const onChangeSearchTitle = e =>
   {
@@ -135,12 +136,12 @@ function TutotialList ()
                 {currentTutorial.published ? "Published" : "Pending"}
               </div>
 
-              <NavLink
+              <Link
                 to={"/tutorials/" + currentTutorial.id}
-                className="badge badge-warning"
+                className="btn btn-sm btn-warning text-dark "
               >
                 Edit
-              </NavLink>
+              </Link>
             </div>
           ) : (
             <div>

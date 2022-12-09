@@ -14,7 +14,7 @@ function App ()
       <Routes>
         <Route exact path={'/'} element={<TutotialList />} />
         <Route exact path="/add" element={<AddTutorial />} />
-        <Route path="/:id" element={<Tutorial />} />
+        <Route path="/tutorials/:id" element={<Tutorial />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </div>

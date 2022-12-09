@@ -29,12 +29,12 @@ const remove = id =>
 
 const removeAll = () =>
 {
-  return http.delete( `/tutorials` );
+  return http.delete( `/tutorial` );
 };
 
 const findByTitle = title =>
 {
-  return http.get( `/tutorial?title=${ title }` );
+  return http.get( `/tutorials?title=${ title }` );
 };
 
 const TutorialServices = {
