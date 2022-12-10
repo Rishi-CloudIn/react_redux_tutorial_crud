@@ -12,7 +12,7 @@ function App ()
     <div className='container-fluid px-0 mx-0'>
       <Navbar />
       <Routes>
-        <Route exact path={'/'} element={<TutotialList />} />
+        <Route exact path="/" element={<TutotialList />} />
         <Route exact path="/add" element={<AddTutorial />} />
         <Route path="/tutorials/:id" element={<Tutorial />} />
         <Route path="*" element={<Navigate to="/" replace />} />

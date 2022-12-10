@@ -30,7 +30,7 @@ function tutorialReducer ( tutorials = initialState, action )
         {
           return {
             ...tutorial,
-            ...payload
+            ...payload,
           };
         } else
         {

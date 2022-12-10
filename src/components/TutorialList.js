@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import
 {
   retrieveTutorial,
@@ -12,6 +12,7 @@ import
 function TutotialList ()
 {
 
+  const { id } = useParams();
   const [ currentTutorial, setCurrentTutorial ] = useState( null );
   const [ currentIndex, setCurrentIndex ] = useState( -1 );
   const [ searchTitle, setSearchTitle ] = useState( "" );
@@ -137,7 +138,7 @@ function TutotialList ()
               </div>
 
               <Link
-                to={"/tutorials/" + currentTutorial.id}
+                to={"/tutorials/" + id}
                 className="btn btn-sm btn-warning text-dark "
               >
                 Edit
